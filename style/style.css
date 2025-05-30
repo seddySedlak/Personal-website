@@ -59,10 +59,12 @@ body{
 header{
     background-color: var(--color-bg-secondary);
     display: flex;
-    gap: 307px;
+    /* gap: 307px; */
+    justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     border-radius: 25px;
+    width: 60%;
 }
 #logo{
     color: var(--color-text-primary);
@@ -119,4 +121,125 @@ header{
 /* main */
 main{
     background-color: var(--color-bg-secondary);
+    padding: 40px 60px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
+.status{
+    background-color: var(--color-bg-enable);
+    color: var(--color-text-enable);
+    padding: 5px 20px;
+    width: fit-content;
+    border-radius: 25px;
+}
+.status-badge::marker{
+    animation: blinkColor 5s infinite ease-in-out;
+}
+@keyframes blinkColor{
+    0%{
+        color: #79f8c3;
+    }
+    15%{
+        color: #14764d;
+    }
+    30%{
+        color: #79f8c3;
+    }
+    100%{
+        color: #2CFFA7;
+    }
+}
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    gap: 175px;
+}
+.hero-content{
+    display: flex;
+    flex: row;
+    gap: 130px;
+}
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    height: auto;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.3;
+}
+.welcome-text{
+    color: var(--color-text-tertiary);
+    font-size: 24px;
+    font-weight: var(--weight-semiBold);
+}
+.name-title h1 {
+    color: var(--color-text-primary);
+    font-size: 56px;
+    font-weight: var(--weight-semiBold);
+}
+.name-title h2{
+    color: var(--color-text-secondary);
+    font-size: 36px;
+    font-weight: var(--weight-medium);
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.description p{
+    max-width: 570px;
+    color: var(--color-text-muted);
+    font-size: 20px;
+}
+.buttons{
+    display: flex;
+    gap: 50px;
+}
+.btn{
+    text-decoration: none;
+    color: var(--color-text-primary);
+    padding: 10px 25px;
+    border-radius: 40px;
+    font-size: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.btn-secondary{
+    background-color: var(--color-accent-secondary);
+}
+.btn i{
+    font-size: 30px;
+    background-color:;
+}
+.btn-primary{
+    background-color: var(--color-accent-primary);
+}
+.logo img{
+    width: 350px;
+    border-radius: 100%;
+    border: 15px solid var(--color-bg-muted);
+}
+.tools{
+    display: flex;
+    justify-content: space-between;
+}
+.tool{
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tool i{
+    font-size: 55px;
+}
+
+
