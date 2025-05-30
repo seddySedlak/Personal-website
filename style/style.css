@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    /* background */
+    --color-bg-primary: #161616;
+    --color-bg-secondary: #212121;
+    --color-bg-enable: #116831;
+    --color-bg-disable: #FFC7C8;
+    --color-bg-muted: #2C2C2C;
+    /* text */
+    --color-text-primary: #FCFCFC;
+    --color-text-secondary: #CFCFCF;
+    --color-text-tertiary: #919191;
+    --color-text-muted: #A8A8A8;
+    --color-text-enable: #2CFFA7;
+    --color-text-disable: #AD0003;
+    --weight-semiBold: 600;
+    --weight-medium: 500;
+    /* buttons */
+    --color-accent-primary: #006DFF;
+    --color-accent-secondary: #3E3E3E;
+}
+.lightmode{
+    /* background */
+    --color-bg-primary: #f0f0f0;
+    --color-bg-secondary: #fcfcfc;
+    --color-bg-enable: #116831;
+    --color-bg-disable: #FFC7C8;
+    --color-bg-muted: #F0F0F0;
+    /* text */
+    --color-text-primary: #161616;
+    --color-text-secondary: #484848;
+    --color-text-tertiary: #373737;
+    --color-text-muted: #515151;
+    --color-text-enable: #2CFFA7;
+    --color-text-disable: #AD0003;
+    --weight-semiBold: 600;
+    --weight-medium: 500;
+    /* buttons */
+    --color-accent-primary: #8739FA;
+    --color-accent-secondary: #373737;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--color-bg-primary);
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-text-primary);
+    gap: 5px;
+}
+/* header */
+header{
+    background-color: var(--color-bg-secondary);
+    display: flex;
+    gap: 307px;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 25px;
+}
+#logo{
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: var(--weight-semiBold);
+}
+.links{
+    display: flex;
+    gap: 35px;
+    height: auto;
+}
+.links li{
+    list-style: none;
+}
+.links a{
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: 18px;
+}
+.actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+#contact-btn{
+    text-decoration: none;
+    color: var(--color-text-primary);
+    background-color: var(--color-accent-secondary);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: var(--weight-medium);
+}
+#theme-switch{
+    color: var(--color-text-primary);
+    background: none;
+    border: none;
+}
+#theme-switch i{
+    font-size: 38px;
+    cursor: pointer;
+}
+#theme-switch i:last-child{
+    display: none;
+}
+.lightmode #theme-switch i:first-child{
+    display: none;
+}
+.lightmode #theme-switch i:last-child{
+    display: block;
+}
+/* main */
+main{
+    background-color: var(--color-bg-secondary);
+}
