@@ -5,16 +5,17 @@
     <title>Tomáš Sedlák | Frontend vývojář a designér</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"/>
-    <link rel="logo" href="">
+    <link rel="icon" href="/img/seddy_logo.png">
     <link rel="stylesheet" href="/style/style.css">
     <script src="/js/theme.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
 </head>
 <body>
     <header>
         <a href="#" id="logo">Tomáš Sedlák</a>
         <ul class="links">
-            <li><a href="#">Domů</a></li>
-            <li><a href="#">Služby</a></li>
+            <li><a href="#home">Domů</a></li>
+            <li><a href="#services">Služby</a></li>
             <li><a href="#">O mně</a></li>
         </ul>
         <div class="actions">
@@ -22,37 +23,41 @@
                 <i class='bx  bxs-sun'></i> 
                 <i class='bx  bxs-moon'></i> 
             </button>
-            <a href="#" id="contact-btn">Kontakt</a> 
+            <a href="#contact" id="contact-btn">Kontakt</a> 
         </div>
     </header>
     <main>
-        <div class="status">
-            <li class="status-badge">K dispozici pro práci</li>
-        </div>
-        <section class="hero-section">
-            <div class="hero-content">
-                <div class="intro-text">
-                    <div class="welcome">
-                        <span class="welcome-text">Čauky, jsem 👋</span>
-                        <div class="name-title">
-                            <h1>Tomáš Sedlák</h1>
-                            <h2>Frontend vývojář | Designér</h2>
-                        </div>
-                    </div>
-                    <div class="description">
-                        <p>Vytvářím a navrhuji moderní webové stránky, které jsou nejen vizuálně atraktivní a funkční na všech zařízeních, ale hlavně prodávají za vás.</p>
-                        <div class="buttons">
-                            <a href="#" class="btn btn-secondary">Služby
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                            <a href="#" class="btn btn-primary">Kontakt
-                                <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-                    </div>
+        <section class="hero-section" id="home">
+            <div class="hero-intro">
+                <div class="status">
+                    <li class="status-badge">K dispozici pro práci</li>
                 </div>
-                <div class="logo">
-                    <img src="img/seddy_profilovka.jpg" alt="Tomáš Sedlák" />
+                <div class="hero-content">
+                    <div class="intro-text">
+                        <div class="welcome">
+                            <span class="welcome-text">Čauky, jsem 👋</span>
+                            <div class="name-title">
+                                <h1>Tomáš Sedlák</h1>
+                                <h2>Frontend vývojář | Designér</h2>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>Vytvářím a navrhuji moderní webové stránky, které jsou nejen vizuálně atraktivní a funkční na všech zařízeních, ale hlavně prodávají za vás.</p>
+                            <div class="buttons">
+                                <a href="#" class="btn btn-secondary">Služby
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                                <a href="#" class="btn btn-primary">Kontakt
+                                    <i class="ri-arrow-right-s-line"></i>
+                                    <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo">
+                        <img src="img/seddy_profilovka.jpg" alt="Tomáš Sedlák" />
+                    </div>
                 </div>
             </div>
             <div class="tools">
@@ -73,6 +78,58 @@
                 </div>
             </div>
         </section>
+        <section class="services-section" id="services">
+            <div class="services-header">
+                <h3>Mé služby</h3>
+                <h2>Vaše potřeby, moje řešení</h2>
+            </div>
+            <div class="services-cards">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class='bx  bx-code-alt'></i>
+                            <h4>Weby, které mají šťávu</h4>
+                        </div>
+                        <p>Chceš web, který nejen skvěle vypadá, ale hlavně funguje? Navrhnu a vytvořím ti moderní, rychlý a bezpečný web, který tě posune o level výš. Žádné šablony, vše na míru!</p>
+                    </div>
+                    <a href="#" class="service-btn">Chci spolupráci!</a>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class='bx  bx-brush'></i> 
+                            <h4>Design, který prodává</h4>
+                        </div>
+                        <p>Navrhnu ti vzhled, který zaujme na první pohled a návštěvníci se budou rádi vracet. Každý detail promyslím tak, aby tvůj web byl přehledný, moderní a přesně podle tvých představ.</p>
+                    </div>
+                    <a href="#" class="service-btn">Chci spolupráci!</a>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <i class='bx  bx-cog'></i>      
+                            <h4>Web bez starostí</h4>
+                        </div>
+                        <p>Postarám se o tvůj web, aby běžel hladce a bez výpadků. Aktualizace, zabezpečení i zálohy nech na mě! Ty se můžeš soustředit na svůj byznys a o zbytek se postarám já.</p>
+                    </div>
+                    <a href="#" class="service-btn">Chci spolupráci!</a>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <span class="footer-copy">2025 © - Tomáš Sedlák</span>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/tomas-seddy-sedlak/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <i class='bx  bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/seddySedlak" target="_blank" rel="noopener" aria-label="GitHub">
+                <i class='bx  bxl-github'></i>
+            </a>
+            <a href="https://www.instagram.com/seddysedlak/" target="_blank" rel="noopener" aria-label="Instagram">
+                <i class='bx  bxl-instagram'></i>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
