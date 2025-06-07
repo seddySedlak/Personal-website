@@ -9,6 +9,7 @@
     /* background */
     --color-bg-primary: #161616;
     --color-bg-secondary: #212121;
+    --color-bg-secondary-transparent: #212121e0;
     --color-bg-enable: #116831;
     --color-bg-disable: #FFC7C8;
     --color-bg-muted: #2C2C2C;
@@ -34,6 +35,7 @@
     /* background */
     --color-bg-primary: #f0f0f0;
     --color-bg-secondary: #fcfcfc;
+    --color-bg-secondary-transparent: #fcfcfce0;
     --color-bg-enable: #116831;
     --color-bg-disable: #FFC7C8;
     --color-bg-muted: #F0F0F0;
@@ -55,6 +57,9 @@
 *{
     padding: 0;
     margin: 0;
+}
+html{
+    scroll-behavior: smooth;
 }
 body{
     margin-top: calc(var(--header-height) + var(--gap));
@@ -93,6 +98,8 @@ header{
 }
 header.scrolled{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    background-color: var(--color-bg-secondary-transparent);
+    backdrop-filter: blur(4px);
 }
 #logo{
     color: var(--color-text-primary);
@@ -142,10 +149,14 @@ header.scrolled{
     color: var(--color-text-primary);
     background: none;
     border: none;
+    transition: color .2s ease-in-out;
 }
 #theme-switch i{
     font-size: 38px;
     cursor: pointer;
+}
+#theme-switch:hover{
+    color: var(--color-text-secondary);
 }
 #theme-switch i:last-child{
     display: none;
@@ -255,14 +266,14 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 17px;
     border: solid 4px transparent;
     background-clip: padding-box;
     transition: box-shadow .2s ease-in-out;
 }
 .btn:active{
-    transform: scale(.9);
-    transition: .1s ease-in-out;
+    transform: scale(.98);
+    transition: .05s ease-in-out;
 }
 .btn-secondary:hover{
     box-shadow: 0px 0px 0px 2px var(--color-bg-btn);
@@ -348,13 +359,23 @@ main{
     border-radius: 20px;
     text-align: center;
 }
-.card a{
+.service-btn{
     background-color: var(--color-accent-primary);
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-size: 20px;
     color: var(--color-text-btn);
+    border: solid 4px transparent;
+    background-clip: padding-box;
+    transition: all .2s ease-in-out;
+}
+.service-btn:hover{
+    box-shadow: 0px 0px 0px 2px var(--color-accent-primary);
+}
+.service-btn:active{
+    transform: scale(.98);
+    transition: .05s ease-in-out;
 }
 .card-content{
     display: flex;
@@ -423,7 +444,7 @@ footer{
 }
 @keyframes slide-in-top {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
         opacity: 0;
     }
     100% {
@@ -431,5 +452,3 @@ footer{
         opacity: 1;
     }
 }
-
-
