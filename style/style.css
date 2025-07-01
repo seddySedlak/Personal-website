@@ -79,7 +79,7 @@ header, main, footer{
     max-width: 1255px;
     box-sizing: border-box;
 }
-header, #home, #services, #faq, footer{
+header, #home, #services, #faq, #contact, footer{
     background-color: var(--color-bg-secondary);
     border-radius: 25px;
     padding: 40px 60px;
@@ -516,9 +516,42 @@ footer{
 }
 .faq-right h2{
     font-size: 40px;
-    font-weight: var(--weight-medium);
+    font-weight: var(--weight-semiBold);
 }
-.recolor_svg{
+.recolor-svg{
     fill: var(--color-accent-primary);
     transition: .2s;
+}
+.contact-section{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    gap: 10px;
+}
+.contact-left h2{
+    font-size: 40px;
+    font-weight: var(--weight-semiBold);
+    color: var(--color-text-primary);
+    line-height: 49px;
+}
+.contact-desc{
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    font-weight: normal;
+}
+.contact-right{
+    max-width: 610px;
+    width: 100%;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contact-form textarea{
+    max-width: 100%;
 }
