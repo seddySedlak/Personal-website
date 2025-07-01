@@ -9,7 +9,7 @@ window.addEventListener('scroll', function() {
 });
 // smooth html scroll - Lenis library
 const lenis = new Lenis({
-    lerp: 0.185
+    lerp: 0.175
 });
 
 function raf(time) {
