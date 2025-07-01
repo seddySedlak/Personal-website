@@ -95,6 +95,7 @@ header{
     position: fixed;
     transition: box-shadow .1s ease-in-out;
     height: var(--header-height);
+    width: calc(100% - calc(var(--gap) * 2));
 }
 header.scrolled{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
@@ -179,7 +180,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 175px;
+    gap: 150px;
 }
 .status{
     background-color: var(--color-bg-enable);
