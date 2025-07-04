@@ -222,26 +222,30 @@
                     <input type="email" placeholder="Email" required>
                     <div class="select-menu" tabindex="0">
                         <button class="select-btn placeholder" type="button" aria-haspopup="listbox" aria-expanded="false">
-                            Vybrat službu
+                            <span class="select-btn-text">Vybrat službu</span>
                             <i class='ri-arrow-down-s-fill  select-icon'></i> 
                         </button>
                         <ul class="options" role="listbox" tabindex="-1">
                             <li class="option" data-value="webdev" tabindex="0" role="option">Tvorba webových stránek</li>
                             <li class="option" data-value="design" tabindex="0" role="option">Webdesign na míru</li>
                             <li class="option" data-value="redesign" tabindex="0" role="option">Redesign webu</li>
-                            <li class="option" data-value="sprava" tabindex="0" role="option">Správa webu a údržba</li>
-                            <li class="option" data-value="konzultace" tabindex="0" role="option">Konzultace projektu</li>
+                            <li class="option" data-value="sprava" tabindex="0" role="option">Správa webu</li>
+                            <li class="option" data-value="konzultace" tabindex="0" role="option">Konzultace</li>
                         </ul>
                         <input type="hidden" name="service" value="">
                     </div>
                     <textarea placeholder="Zpráva" rows="6" required></textarea>
                     <div class="form-actions">
-                        <button type="button" class="copy-email-btn">
+                        <button type="button" class="copy-email-btn  form-btn">
                             <i class="bx  bx-copy  btn-copy"></i> Zkopírovat email
                         </button>
-                        <button type="submit" class="btn-form">Odeslat</button>
+                        <button type="submit" class="submit-btn  form-btn">Odeslat</button>
                     </div>
                 </form>
+            </div>
+            <div class="alert-copy">
+                Email úspěšně zkopírován do schránky!
+                <i class='bx  bxs-check-circle'></i> 
             </div>
         </section>
     </main>

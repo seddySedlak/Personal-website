@@ -11,7 +11,6 @@ window.addEventListener('scroll', function() {
 const lenis = new Lenis({
     lerp: 0.175
 });
-
 function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);

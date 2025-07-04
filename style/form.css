@@ -7,6 +7,7 @@
     flex-direction: column;
     min-width: 100%;
     gap: 20px;
+    
 }
 .contact-form input, .select-btn, .contact-form textarea{
     color: var(--color-text-secondary);
@@ -25,6 +26,8 @@
 }
 .select-btn{
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
 }
 .select-btn{
     width: 100%;
@@ -33,9 +36,100 @@
 }
 .select-icon{
     font-size: 20px;
+    transition: .3s;
+    transform-origin: 50% 40%;
+}
+.select-menu{
+    position: relative;
+}
+.select-menu.open .select-icon{
+    transform: rotate(-180deg);
+}
+.options{
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    background-color: var(--color-bg-muted);
+    list-style: none;
+    border-radius: 10px;
+    width: fit-content;
+    text-align: center;
+    max-height: 0;
+    transition: .3s;
+    z-index: 10;
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+.select-menu.open .options{
+    padding: 10px 15px;
+    max-height: fit-content;
+    margin-top: 10px;
+}
+.option{
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 2px;
+}
+.option:hover, .option.selected{
+    background-color: var(--color-accent-primary);
 }
 .contact-form textarea{
     width: 100%;
     max-width: 100%;
     resize: vertical;
+}
+.form-actions{
+    display: flex;
+    justify-content: space-between;
+}
+.form-btn{
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.copy-email-btn{
+    background-color: transparent;
+    border: 2.5px solid var(--color-bg-btn);
+    color: var(--color-text-tertiary);
+}
+.submit-btn{
+    background-color: var(--color-accent-primary);
+    border: solid 3px transparent;
+    color: #fcfcfc;
+    background-clip: padding-box;
+    min-width: 50%;
+    transition: .2s;
+}
+.submit-btn:hover{
+    box-shadow: 0px 0px 0px 2px var(--color-accent-primary);
+}
+.submit-btn:active{
+    transform: scale(.98);
+}
+.alert-copy{
+    position: fixed;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c3f3d7;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #24ad5d;
+    border-left: 10px solid #2fd573;
+    opacity: 0;
+    transition: .5s ease-out;
+}
+.copy-email-btn:active{
+    transform: scale(.98);
+}
+.alert-copy.show{
+    top: 100px;
+    opacity: 1;
+}
+.alert-copy i{
+    font-size: 25px;
 }
