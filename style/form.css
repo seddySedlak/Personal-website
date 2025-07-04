@@ -1,0 +1,41 @@
+.contact-right{
+    max-width: 610px;
+    width: 100%;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    gap: 20px;
+}
+.contact-form input, .select-btn, .contact-form textarea{
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    padding: 15px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: var(--color-bg-muted);
+    outline: none;
+}
+.contact-form input:focus, .select-btn:focus, .contact-form textarea:focus{
+    border: 2px solid var(--color-accent-primary);
+}
+.select-btn.placeholder, .contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--color-text-muted);
+}
+.select-btn{
+    cursor: pointer;
+}
+.select-btn{
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+.select-icon{
+    font-size: 20px;
+}
+.contact-form textarea{
+    width: 100%;
+    max-width: 100%;
+    resize: vertical;
+}
