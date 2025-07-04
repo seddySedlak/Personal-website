@@ -101,7 +101,7 @@ header{
 header.scrolled{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
     background-color: var(--color-bg-secondary-transparent);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
 }
 #logo{
     color: var(--color-text-primary);
@@ -257,8 +257,9 @@ main{
 .description p{
     max-width: 570px;
     color: var(--color-text-muted);
-    font-size: 22px;
+    font-size: 20px;
 }
+
 .buttons{
     display: flex;
     gap: 50px;
