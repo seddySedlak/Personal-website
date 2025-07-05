@@ -61,11 +61,8 @@ label {
 }
 
 @media (max-width: 480px) {
-    #theme-switch i{
-        font-size: 30px;
-    }
-    #logo{
-        font-size: 1.2rem;
+    .status-badge::after{
+        content: "K dispozici";
     }
     header, #home, #services, #faq, #contact, footer{
         padding: 1.75rem;
@@ -126,7 +123,26 @@ label {
         padding: .75rem;
     }
 }
-@media (max-width: 768px) {
+@media (width < 768px) {
+    #menu-theme-switch{
+    color: var(--color-text-primary);
+    background: none;
+    border: none;
+    transition: color .2s ease-in-out;
+}
+    #menu-theme-switch i{
+        font-size: 2.375rem;
+        cursor: pointer;
+    }
+    #menu-theme-switch:hover{
+        color: var(--color-text-secondary);
+    }
+    #menu-theme-switch i{
+        font-size: 30px;
+    }
+    #logo{
+        font-size: 1.2rem;
+    }
     .burger {
         display: flex;
         justify-content: center;
@@ -137,29 +153,56 @@ label {
     .links, .actions{
         display: none;
     }
-    .menu{
+    .menu-links{
+        list-style-type: none;
+    }
+    .menu-links a{
+        display: block;
+        text-decoration: none;
+        color: var(--color-text-secondary);
+        padding: .75rem 1rem;
+    }
+    .menu-actions{
+        display: flex;
+        justify-content: space-between;
+        padding: .75rem 1rem;
+    }
+    #menu-contact-btn{
+        text-decoration: none;
+        color: #fcfcfc;
+        background-color: var(--color-accent-secondary);
+        padding: .5rem 4rem;
+        border-radius: 40px;
+        font-weight: 300;
+    }
+    body.open .menu{
+        max-height: 600px;
+        overflow:hidden;
+        position: fixed;
+        top: calc(var(--header-height) + calc(var(--gap) * 2)) ;
+        left: 10px;
+        right: 10px;
+        z-index: 999;
+        gap: 1rem;
         border-radius: 25px;
         padding: 25px;
         box-sizing: border-box;
         text-align: left;
         background-color: var(--color-bg-secondary);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
     }
-    .menu-links{
-        list-style-type: none;
+    #menu-theme-switch i:last-child {
+        display: none;
     }
-    .menu-links li{
-        text-decoration: none;
+    .lightmode #menu-theme-switch i:first-child {
+        display: none;
     }
-    body.open .menu{
-        display: flex;
-        position: fixed;
-        top: calc(var(--header-height) + calc(var(--gap) * 2)) ;
-        left: 10px;
-        right: 10px;
-        flex-direction: column;
-        height: fit-content;
-        z-index: 999;
+    .lightmode #menu-theme-switch i:last-child {
+        display: block;
     }
+}
+@media (width = 768px){
+
 }
 @media (max-width: 1024px) {
 

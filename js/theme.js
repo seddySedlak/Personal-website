@@ -1,5 +1,6 @@
 let lightmode = localStorage.getItem('lightmode') 
 const themeSwitch = document.getElementById('theme-switch')
+const menuThemeSwitch = document.getElementById('menu-theme-switch')
 // Enable light mode by adding class and saving state
 const enableLightMode = () => {
     document.body.classList.add('lightmode')
@@ -17,6 +18,11 @@ if(lightmode === 'active') enableLightMode()
 
 // Toggle light mode on button click
 themeSwitch.addEventListener("click", () => { 
+    lightmode = localStorage.getItem('lightmode')
+    lightmode !== "active" ? enableLightMode() : disableLightMode()
+})
+// Toggle light mode on mobile menu button click
+menuThemeSwitch.addEventListener("click", () => { 
     lightmode = localStorage.getItem('lightmode')
     lightmode !== "active" ? enableLightMode() : disableLightMode()
 })
