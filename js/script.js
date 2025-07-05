@@ -52,3 +52,7 @@ document.querySelector('.copy-email-btn').addEventListener('click', function() {
 		.then(() => showAlertCopy('Email successfully copied to clipboard!')) // Show success alert
 		.catch(() => showAlertCopy('Copy failed!')); // Show error alert if copying fails
 });
+// hamburder menu
+const toggleMenu = () => {
+    document.body.classList.toggle("open");
+};

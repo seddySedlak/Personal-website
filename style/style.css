@@ -106,8 +106,11 @@ header.scrolled{
 #logo{
     color: var(--color-text-primary);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 1.56rem;
     font-weight: var(--weight-semiBold);
+}
+.menu{
+    display: none;
 }
 .links{
     display: flex;
@@ -127,8 +130,8 @@ header.scrolled{
     color: var(--color-accent-primary);
 }
 .actions{
-    display: flex;
-    justify-content: center;
+    display: flex; 
+    justify-content: center; 
     align-items: center;
     gap: 25px;
 }
@@ -138,7 +141,7 @@ header.scrolled{
     background-color: var(--color-accent-secondary);
     padding: 7px 15px;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: var(--weight-medium);
     border: solid 3px transparent;
     background-clip: padding-box;
@@ -158,7 +161,7 @@ header.scrolled{
     transition: color .2s ease-in-out;
 }
 #theme-switch i{
-    font-size: 38px;
+    font-size: 2.375rem;
     cursor: pointer;
 }
 #theme-switch:hover{
@@ -236,17 +239,17 @@ main{
 }
 .welcome-text{
     color: var(--color-text-tertiary);
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: var(--weight-semiBold);
 }
 .name-title h1 {
     color: var(--color-text-primary);
-    font-size: 58px;
+    font-size: 3.625rem;
     font-weight: var(--weight-semiBold);
 }
 .name-title h2{
     color: var(--color-text-secondary);
-    font-size: 38px;
+    font-size: 2.375rem;
     font-weight: var(--weight-medium);
 }
 .description{
@@ -257,9 +260,8 @@ main{
 .description p{
     max-width: 570px;
     color: var(--color-text-muted);
-    font-size: 20px;
+    font-size: 1.125rem;
 }
-
 .buttons{
     display: flex;
     gap: 50px;
@@ -269,7 +271,7 @@ main{
     color: var(--color-text-primary);
     padding: 15px 25px;
     border-radius: 40px;
-    font-size: 24px;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -318,14 +320,14 @@ main{
     justify-content: space-between;
 }
 .tool{
-    font-size: 28px;
+    font-size: 1.75rem;
     display: flex;
     align-items: center;
     gap: 5px;
     color: var(--color-text-secondary);
 }
 .tool i{
-    font-size: 55px;
+    font-size: 3.438rem;
 }
 .services-section{
     padding: 40px 60px;
@@ -337,12 +339,12 @@ main{
     text-align: center;
 }
 .services-header h3{
-    font-size: 26px;
+    font-size: 1.625rem;
     color: var(--color-text-secondary);
     font-weight: var(--weight-medium);
 }
 .services-header h2{
-    font-size: 44px;
+    font-size: 2.75rem;
     color: var(--color-text-primary);
     font-weight: var(--weight-semiBold);
 }
@@ -371,7 +373,7 @@ main{
     padding: 15px 20px;
     border-radius: 40px;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 1.375rem;
     color: var(--color-text-btn);
     border: solid 4px transparent;
     background-clip: padding-box;
@@ -391,7 +393,7 @@ main{
     text-align: left;
 }
 .card-content p{
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--color-text-secondary);
 }
 .card-header{
@@ -400,7 +402,7 @@ main{
     gap: 30px;
 }
 .card-header i{
-    font-size: 20px;
+    font-size: 1.25rem;
     background-color: var(--color-bg-btn);
     width: fit-content;
     padding: 15px;
@@ -410,7 +412,7 @@ main{
 .card-header h4{
     font-weight: var(--weight-semiBold);
     color: var(--color-text-primary);
-    font-size: 32px;
+    font-size: 2rem;
     width: 90%;
 }
 footer{
@@ -420,7 +422,7 @@ footer{
     padding: 15px 30px;
 }
 .footer-copy{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 .footer-socials{
     display: flex;
@@ -484,7 +486,7 @@ footer{
     transition: .4s ;
 }
 .faq-question{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 300;
     display: flex;
     align-items: center;
@@ -492,7 +494,7 @@ footer{
     line-height: 29px;
 }
 .faq-icon{
-    font-size: 30px;
+    font-size: 1.875rem;
     transition: .4s;
     font-weight: 100;
     margin-left: 5px;
@@ -520,7 +522,7 @@ footer{
     margin-top: 15px;
 }
 .faq-right h2{
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: var(--weight-semiBold);
 }
 .recolor-svg{
@@ -545,6 +547,6 @@ footer{
 }
 .contact-desc{
     color: var(--color-text-secondary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
 }

@@ -8,6 +8,7 @@
     <link rel="icon" href="/img/seddy_logo.png">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.4/dist/lenis.css">
     <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script> 
     <script src="js/theme.js" defer></script>
@@ -17,24 +18,42 @@
 <body>
     <header>
         <a href="#" id="logo">Tomáš Sedlák</a>
-        <ul class="links">
+            <ul class="links">
+                <li><a href="#">Domů</a></li>
+                <li><a href="#services">Služby</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
+            <div class="actions">
+                <button id="theme-switch">
+                    <i class='bx  bxs-sun'></i> 
+                    <i class='bx  bxs-moon'></i> 
+                </button>
+                <a href="#contact" id="contact-btn">Kontakt</a>
+            </div>
+        <label class="burger">
+            <input type="checkbox" oninput="toggleMenu()" />
+            <span class="burger-icon"></span>
+        </label>
+    </header>
+    <nav class="menu">
+        <ul class="menu-links">
             <li><a href="#">Domů</a></li>
             <li><a href="#services">Služby</a></li>
-            <li><a href="#about">O mně</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
         </ul>
-        <div class="actions">
-            <button id="theme-switch">
+        <div class="menu-actions">
+            <button id="menu-theme-switch">
                 <i class='bx  bxs-sun'></i> 
                 <i class='bx  bxs-moon'></i> 
             </button>
-            <a href="#contact" id="contact-btn">Kontakt</a> 
+            <a href="#contact" id="menu-contact-btn">Kontakt</a>
         </div>
-    </header>
+    </nav>
     <main>
         <section class="hero-section" id="home">
             <div class="hero-intro">
                 <div class="status">
-                    <li class="status-badge">K dispozici pro práci</li>
+                    <li class="status-badge">K dispozici</li>
                 </div>
                 <div class="hero-content">
                     <div class="intro-text">
