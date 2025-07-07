@@ -196,30 +196,27 @@ main{
     gap: 150px;
 }
 .status{
-    background-color: var(--color-bg-enable);
-    color: var(--color-text-enable);
-    padding: 5px 20px;
-    width: fit-content;
-    border-radius: 25px;
+
 }
-.status-badge::marker{
-    animation: blinkColor 4s infinite ease-in-out;
+.status::before{
+    content: "·";
+    font-size: 4rem;
+    animation: blink 2s infinite alternate;
+    animation-delay: 1s;
+    opacity: 1;
+    color: green;
 }
-.status-badge::after{
-    content: "K dispozici pro práci";
-}
-@keyframes blinkColor{
-    0%{
-        color: #79f8c3;
+
+@keyframes blink {
+    0% {
+        text-shadow: #116831 0 0 10px;
+        transform: scale(1);
+        opacity: .75;
     }
-    25%{
-        color: #14764d;
-    }
-    50%{
-        color: #79f8c3;
-    }
-    100%{
-        color: #2CFFA7;
+    100% {
+        text-shadow: #116831 0 0 25px;
+        transform: scale(2);
+        opacity: .25;
     }
 }
 .hero-intro{
