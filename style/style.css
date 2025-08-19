@@ -9,7 +9,7 @@
     --color-bg-primary: #161616;
     --color-bg-secondary: #212121;
     --color-bg-secondary-transparent: #212121e0;
-    --color-bg-enable: #116831;
+    --color-bg-enable: #a6fdc3;
     --color-bg-disable: #FFC7C8;
     --color-bg-muted: #2C2C2C;
     /* text */
@@ -17,7 +17,7 @@
     --color-text-secondary: #CFCFCF;
     --color-text-tertiary: #919191;
     --color-text-muted: #A8A8A8;
-    --color-text-enable: #2CFFA7;
+    --color-text-enable: #116831;
     --color-text-disable: #AD0003;
     --weight-semiBold: 600;
     --weight-medium: 500;
@@ -35,7 +35,7 @@
     --color-bg-primary: #f0f0f0;
     --color-bg-secondary: #fcfcfc;
     --color-bg-secondary-transparent: #fcfcfce0;
-    --color-bg-enable: #116831;
+    --color-bg-enable: rgb(58, 97, 7);
     --color-bg-disable: #FFC7C8;
     --color-bg-muted: #F0F0F0;
     /* text */
@@ -43,7 +43,7 @@
     --color-text-secondary: #484848;
     --color-text-tertiary: #373737;
     --color-text-muted: #515151;
-    --color-text-enable: #2CFFA7;
+    --color-text-enable: #a6fdc3;
     --color-text-disable: #AD0003;
     --weight-semiBold: 600;
     --weight-medium: 500;
@@ -196,27 +196,39 @@ main{
     gap: 150px;
 }
 .status{
-
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    background-color: var(--color-text-enable);
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    color: var(--color-bg-enable);
 }
-.status::before{
-    content: "·";
-    font-size: 4rem;
-    animation: blink 2s infinite alternate;
-    animation-delay: 1s;
-    opacity: 1;
-    color: green;
+.status-dot {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-bg-enable);
 }
-
+.status-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: var(--color-bg-enable);
+    animation: blink 1s cubic-bezier(0,0,.2,1) infinite;
+}
+.status-label {
+    color: var(--status-color);
+    margin-left: 1rem;
+}
 @keyframes blink {
-    0% {
-        text-shadow: #116831 0 0 10px;
-        transform: scale(1);
-        opacity: .75;
-    }
-    100% {
-        text-shadow: #116831 0 0 25px;
+    75%,
+    to {
         transform: scale(2);
-        opacity: .25;
+        opacity: 0; 
     }
 }
 .hero-intro{
@@ -488,7 +500,7 @@ footer{
     border-radius: 20px;
     background-color: var(--color-bg-muted);
     padding: 20px 30px;
-    transition: .4s ;
+    transition: all .2s ease-in-out;
 }
 .faq-question{
     font-size: 1.5rem;
@@ -498,9 +510,11 @@ footer{
     justify-content: space-between;
     line-height: 29px;
 }
+.faq-answer{
+    margin-top: 0px;
+}
 .faq-icon{
     font-size: 1.875rem;
-    transition: .4s;
     font-weight: 100;
     margin-left: 5px;
 }
