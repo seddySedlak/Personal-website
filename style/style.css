@@ -35,7 +35,7 @@
     --color-bg-primary: #f0f0f0;
     --color-bg-secondary: #fcfcfc;
     --color-bg-secondary-transparent: #fcfcfce0;
-    --color-bg-enable: rgb(58, 97, 7);
+    --color-bg-enable: #116831;
     --color-bg-disable: #FFC7C8;
     --color-bg-muted: #F0F0F0;
     /* text */
@@ -43,7 +43,7 @@
     --color-text-secondary: #484848;
     --color-text-tertiary: #373737;
     --color-text-muted: #515151;
-    --color-text-enable: #a6fdc3;
+    --color-text-enable: #dcfce7;
     --color-text-disable: #AD0003;
     --weight-semiBold: 600;
     --weight-medium: 500;
@@ -517,6 +517,7 @@ footer{
     font-size: 1.875rem;
     font-weight: 100;
     margin-left: 5px;
+    transition: .2s;
 }
 .faq-icon:hover{
     cursor: pointer;
