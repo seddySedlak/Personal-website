@@ -35,7 +35,7 @@ document.querySelectorAll('.option').forEach(option => {
 
 // Function to show a custom alert (copy notification)
 function showAlertCopy(message) {
-	const alertEl = document.querySelector('.alert-copy');
+	const alertEl = document.getElementById('alert-copy');
 	if (!alertEl) return; // If the alert element is not found, exit
 	alertEl.classList.add('show');
 	if (alertEl._hideTimeout) clearTimeout(alertEl._hideTimeout);
@@ -60,7 +60,7 @@ const toggleMenu = () => {
 
 // Function to show a custom alert (soon notification)
 function showSoonCopy(message) {
-	const alertEl = document.querySelector('.alert-soon');
+	const alertEl = document.getElementById('alert-soon');
 	if (!alertEl) return; // If the alert element is not found, exit
 	alertEl.classList.add('show');
 	if (alertEl._hideTimeout) clearTimeout(alertEl._hideTimeout);

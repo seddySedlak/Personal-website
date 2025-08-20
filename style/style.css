@@ -97,6 +97,7 @@ header{
     transition: box-shadow .1s ease-in-out;
     height: var(--header-height);
     width: calc(100% - calc(var(--gap) * 2));
+    z-index: 1;
 }
 header.scrolled{
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
@@ -199,7 +200,7 @@ main{
     align-items: center;
     width: fit-content;
     background-color: var(--color-text-enable);
-    padding: .5rem 1.5rem;
+    padding: .75rem 1.5rem;
     border-radius: 999px;
     color: var(--color-bg-enable);
 }
@@ -210,6 +211,7 @@ main{
     height: 10px;
     border-radius: 50%;
     background-color: var(--color-bg-enable);
+    z-index: 0;
 }
 .status-dot::after {
     content: "";
@@ -223,8 +225,8 @@ main{
     color: var(--status-color);
     margin-left: 1rem;
 }
-:lang(cs-CZ) .status-label::before{ content: "K dispozici pro práci"; }
-:lang(en) .status-label::before{ content: "Available for work"; }
+:lang(cs-CZ) .status-label::before{ content: "Otevřený příležitostem"; }
+:lang(en) .status-label::before{ content: "Open to Opportunities"; }
 @keyframes blink {
     75%,
     to {
@@ -239,7 +241,7 @@ main{
 }
 .hero-content{
     display: flex;
-    flex: row;
+    align-items: center;
     justify-content: space-between;
 }
 .intro-text{
@@ -282,21 +284,20 @@ main{
 }
 .buttons{
     display: flex;
-    gap: 50px;
+    gap: 20px;
 }
 .btn{
     text-decoration: none;
     color: var(--color-text-primary);
-    padding: 15px 25px;
     border-radius: 40px;
     font-size: 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 17px;
     border: solid 4px transparent;
     background-clip: padding-box;
     transition: box-shadow .2s ease-in-out;
+    gap: 15px;
 }
 .btn:active{
     transform: scale(.98);
@@ -311,6 +312,7 @@ main{
 .btn-secondary{
     background-color: var(--color-accent-secondary);
     color: var(--color-text-btn);
+    padding: 15px 25px;
 }
 .btn i{
     font-size: 30px;
@@ -327,6 +329,7 @@ main{
 .btn-primary{
     background-color: var(--color-accent-primary);
     color: var(--color-text-btn);
+    padding: 15px 35px;
 }
 .logo img{
     width: 350px;
@@ -375,8 +378,6 @@ main{
 .card{
     width: 100%;
     max-width: 330px;
-    height: 100%;
-    min-height: 580px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -384,7 +385,6 @@ main{
     background-color: var(--color-bg-muted);
     box-sizing: border-box;
     border-radius: 20px;
-    text-align: center;
 }
 .service-btn{
     background-color: var(--color-accent-primary);
@@ -396,6 +396,7 @@ main{
     border: solid 4px transparent;
     background-clip: padding-box;
     transition: all .2s ease-in-out;
+    text-align: center;
 }
 .service-btn:hover{
     box-shadow: 0px 0px 0px 2px var(--color-accent-primary);
@@ -419,7 +420,7 @@ main{
     flex-direction: column;
     gap: 30px;
 }
-.card-header i{
+.card i{
     font-size: 1.25rem;
     background-color: var(--color-bg-btn);
     width: fit-content;
@@ -505,7 +506,7 @@ footer{
 }
 .faq-question{
     font-size: 1.25rem;
-    font-weight: 400;
+    font-weight: normal;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -543,9 +544,18 @@ footer{
 .faq-item.open .faq-answer{
     margin-top: 15px;
 }
+.faq-header{
+    line-height: 1.2;
+}
 .faq-right h2{
     font-size: 2.5rem;
     font-weight: var(--weight-semiBold);
+}
+.faq-right h3{
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+    font-weight: var(--weight-medium);
+    text-align: right;
 }
 .recolor-svg{
     fill: var(--color-accent-primary);
@@ -572,7 +582,7 @@ footer{
     font-size: 1rem;
     font-weight: normal;
 }
-.alert-copy, .alert-soon{
+.alert{
     position: fixed;
     top: -75px;
     left: 50%;
@@ -585,22 +595,33 @@ footer{
     opacity: 0;
     transition: .7s ease-out;
     max-width: 70%;
+    z-index: 999;
 }
-.alert-copy{
+/* alerts */
+.alert-ok{
     background-color: #c3f3d7;
     color: #24ad5d;
     border-left: 10px solid #2fd573;
 }
-.alert-soon{
+.alert-info{
+    background-color: #c3d8f3;
+    color: #247fad;
+    border-left: 10px solid #2f85d5;
+}
+.alert-error{
+    background-color: #f3c3c3;
+    color: #ad2424;
+    border-left: 10px solid #d52f2f;
+}
+.alert-warning{
     background-color: #f3e9c3;
     color: #ad9224;
     border-left: 10px solid #d59e2f;
 }
-.alert-soon i, .alert-copy i{
-    font-size: 25px;
+.alert.show{
+    font-size: 1.125rem;
 }
-.alert-soon.show, .alert-copy.show{
+.alert.show{
     top: 100px;
     opacity: 1;
-    z-index: 999;
 }

@@ -64,142 +64,7 @@ label {
     header, #home, #services, #faq, #contact, footer{
         padding: 1.5rem;
     }
-    .hero-section{
-        gap: 3rem;
-    }
-    .hero-intro{
-        gap: 3rem;
-    }
-    .hero-content{
-        flex-direction: column-reverse;
-        gap: 2rem;
-    }
-    .status{
-        font-size: .75rem;
-        padding: 0;
-    }
-    .status-badge{
-        padding: 0.3rem 0.6rem;
-    }
-    .intro-text{
-        gap: 1rem;
-    }
-    .welcome-text{
-        font-size: 1.25rem;
-    }
-    .name-title{
-        line-height: 1.3;
-    }
-    .name-title h1{
-        font-size: 2rem;
-    }
-    .name-title h2{
-        font-size: 1.4rem;
-    }
-    .description{
-        gap: 2rem;
-    }
-    .description p{
-        font-size: .85rem;
-    }
-    .logo{
-        display: flex;
-    }
-    .logo img{
-        width: 45%;
-        border-width: 8px;
-    }
-    .buttons{
-        width: 100%;
-        flex-direction: column;
-        gap: .3rem;
-    }
-    .btn{
-        justify-content: center;
-        font-size: 1.2rem;
-        padding: .75rem;
-    }
-    /* services */
-    .services-section{
-        gap: 30px;
-    }
-    .services-header h3{
-        font-size: 1.15rem;
-    }
-    .services-header h2{
-        font-size: 1.75rem;
-    }
-    .services-cards{
-        flex-direction: column;
-        gap: 10px;
-    }
-    /* faq */
-    .faq-section{
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-    .faq-right{
-        align-items: center;
-    }
-    .faq-right h2{
-        font-size: 1.75rem;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    .faq-right h2::before{
-        content: "FAQ";
-        font-size: 1.15rem;
-        text-align: center;
-        color: var(--color-text-secondary);
-        font-weight: var(--weight-medium);
-    }
-    .faq-right svg{
-        display: none;
-    }
-    /* contact */
-    .contact-section{
-        flex-direction: column;
-        gap: 30px;
-    }
-    .contact-left{
-        max-width: 100%;
-    }
-    .contact-left h2{
-        font-size: 1.75rem;
-        line-height: 2.5rem;
-    }
-    .contact-desc{
-        font-size: 1rem;
-    }
-    .form-actions{
-        flex-direction: column;
-        gap: 5px;
-    }
-    .form-btn{
-        padding: 15px;
-        border-radius: 30px;
-        font-size: 1rem;
-    }
-    .footer-copy{
-        font-size: 1rem;
-    }
-    .footer-socials{
-        gap: 15px;
-    }
-    .footer-socials i{
-        font-size: 1.75rem;
-    }
-    .alert-soon, .alert-copy{
-        width: 100%;
-    }
-}
-@media (width <= 768px) {
-    .status{
-        padding: .3rem 1rem;
-    }
-    :lang(cs-CZ) .status-label::before{ content: "K dispozici"; }
-    :lang(en) .status-label::before{ content: "Available"; }
+    /* hamburger menu */
     #menu-theme-switch{
         color: var(--color-text-primary);
         background: none;
@@ -253,7 +118,7 @@ label {
     }
     body.open .menu{
         max-height: 600px;
-        overflow:hidden;
+        overflow: hidden;
         position: fixed;
         top: calc(var(--header-height) + calc(var(--gap) * 2)) ;
         left: 10px;
@@ -275,6 +140,278 @@ label {
     }
     .lightmode #menu-theme-switch i:last-child {
         display: block;
+    }
+    /* hero */
+    .hero-section{
+        gap: 3rem;
+    }
+    .hero-intro{
+        gap: 3rem;
+    }
+    .hero-content{
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    .status{
+        font-size: .75rem;
+        padding: .4rem 1rem;
+    }
+    .intro-text{
+        gap: 1rem;
+    }
+    .welcome-text{
+        font-size: 1.25rem;
+    }
+    .name-title{
+        line-height: 1.3;
+    }
+    .name-title h1{
+        font-size: 2rem;
+    }
+    .name-title h2{
+        font-size: 1.4rem;
+    }
+    .description{
+        gap: 2rem;
+    }
+    .description p{
+        font-size: .85rem;
+    }
+    .logo{
+        display: flex;
+    }
+    .logo img{
+        width: 45%;
+        border-width: 8px;
+    }
+    .buttons{
+        width: 100%;
+        flex-direction: column;
+        gap: .3rem;
+    }
+    .btn{
+        justify-content: center;
+        font-size: 1.2rem;
+        padding: .75rem;
+    }
+    .alert{
+        width: 100%;
+    }
+    /* services */
+    .services-section{
+        gap: 30px;
+    }
+    .services-header h3{
+        font-size: 1.15rem;
+    }
+    .services-header h2{
+        font-size: 1.75rem;
+    }
+    .services-cards{
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* faq */
+    .faq-section{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .faq-right{
+        align-items: center;
+    }
+    .faq-right h2{
+        font-size: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .faq-header{
+        line-height: 1.6;
+    }
+    .faq-right h3{
+        font-size: 1.15rem;
+        text-align: center;
+        color: var(--color-text-secondary);
+        font-weight: var(--weight-medium);
+    }
+    .faq-right svg{
+        display: none;
+    }
+    /* contact */
+    .contact-section{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-left{
+        max-width: 100%;
+    }
+    .contact-left h2{
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+    .contact-desc{
+        font-size: 1rem;
+    }
+    .form-actions{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .form-btn{
+        padding: 15px;
+        border-radius: 30px;
+        font-size: 1rem;
+    }
+    .footer-copy{
+        font-size: 1rem;
+    }
+    .footer-socials{
+        gap: 15px;
+    }
+    .footer-socials i{
+        font-size: 1.75rem;
+    }
+    :lang(cs-CZ) .status-label::before{ content: "K dispozici"; }
+    :lang(en) .status-label::before{ content: "Available"; }
+}
+/* phone-small tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+    header, main, footer{
+        width: 100%;
+        max-width: 700px;
+    }
+    #menu-theme-switch{
+        color: var(--color-text-primary);
+        background: none;
+        border: none;
+        transition: color .2s ease-in-out;
+    }   
+    #menu-theme-switch i{
+        font-size: 2.375rem;
+        cursor: pointer;
+    }
+    #menu-theme-switch:hover{
+        color: var(--color-text-secondary);
+    }
+    #menu-theme-switch i{
+        font-size: 30px;
+    }
+    #logo{
+        font-size: 1.2rem;
+    }
+    .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+    }
+    .links, .actions{
+        display: none;
+    }
+    .menu-links{
+        list-style-type: none;
+    }
+    .menu-links a{
+        display: block;
+        text-decoration: none;
+        color: var(--color-text-secondary);
+        padding: .75rem 1rem;
+    }
+    .menu-actions{
+        display: flex;
+        justify-content: space-between;
+        padding: .75rem 1rem;
+    }
+    #menu-contact-btn{
+        text-decoration: none;
+        color: #fcfcfc;
+        background-color: var(--color-accent-secondary);
+        padding: .5rem 4rem;
+        border-radius: 40px;
+        font-weight: 300;
+    }
+    .menu{
+        max-width: 700px;
+        max-height: 600px;
+    }
+    body.open .menu{
+        height: fit-content;
+        overflow:hidden;
+        position: fixed;
+        top: calc(var(--header-height) + calc(var(--gap) * 2)) ;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        gap: 1rem;
+        border-radius: 25px;
+        padding: 25px;
+        box-sizing: border-box;
+        text-align: left;
+        background-color: var(--color-bg-secondary);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        width: 100%;
+    }
+    #menu-theme-switch i:last-child {
+        display: none;
+    }
+    .lightmode #menu-theme-switch i:first-child {
+        display: none;
+    }
+    .lightmode #menu-theme-switch i:last-child {
+        display: block;
+    }
+    header, #home, #services, #faq, #contact, footer{
+        padding: 2rem 2.5rem;
+    }
+    /* hero */
+    .hero-section{
+        gap: 3rem;
+    }
+    .hero-intro{
+        gap: 3rem;
+    }
+    .hero-content{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        width: 100%;
+    }
+    :lang(cs-CZ) .status-label::before{ content: "K dispozici"; }
+    :lang(en) .status-label::before{ content: "Available"; }
+    .intro-text{
+        width: 100%;
+    }
+    .description{
+        gap: 2rem;
+    }
+    .description p{
+        max-width: 100%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo img{
+        width: 35%;
+        border-width: 10px;
+    }
+    /* services */
+    .services-cards{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card{
+        max-width: 100%;
+        min-height: fit-content;
+        padding: 2rem;
+    }
+    .card-content{
+        flex-direction: row;
+        gap: 40px;
+    }
+    .card-content i{
+        height: fit-content;
+    }
+    .service-btn{
+        text-align: center;
     }
 }
 @media (max-width: 1024px) {
