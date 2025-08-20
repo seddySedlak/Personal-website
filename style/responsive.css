@@ -61,11 +61,8 @@ label {
 }
 
 @media (max-width: 480px) {
-    .status-badge::after{
-        content: "K dispozici";
-    }
     header, #home, #services, #faq, #contact, footer{
-        padding: 1.75rem;
+        padding: 1.5rem;
     }
     .hero-section{
         gap: 3rem;
@@ -122,14 +119,80 @@ label {
         font-size: 1.2rem;
         padding: .75rem;
     }
+    /* services */
+    .services-section{
+        gap: 30px;
+    }
+    .services-header h3{
+        font-size: 1.15rem;
+    }
+    .services-header h2{
+        font-size: 1.75rem;
+    }
+    .services-cards{
+        flex-direction: column;
+        gap: 10px;
+    }
+    /* faq */
+    .faq-section{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .faq-right{
+        align-items: center;
+    }
+    .faq-right h2{
+        font-size: 1.75rem;
+    }
+    .faq-right svg{
+        display: none;
+    }
+    /* contact */
+    .contact-section{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-left{
+        max-width: 100%;
+    }
+    .contact-left h2{
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+    }
+    .contact-desc{
+        font-size: 1rem;
+    }
+    .form-actions{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .form-btn{
+        padding: 15px;
+        border-radius: 30px;
+        font-size: 1rem;
+    }
+    .footer-copy{
+        font-size: 1rem;
+    }
+    .footer-socials{
+        gap: 15px;
+    }
+    .footer-socials i{
+        font-size: 1.75rem;
+    }
 }
-@media (width < 768px) {
+@media (width <= 768px) {
+    .status{
+        padding: .3rem 1rem;
+    }
+    :lang(cs-CZ) .status-label::before{ content: "K dispozici"; }
+    :lang(en) .status-label::before{ content: "Available"; }
     #menu-theme-switch{
-    color: var(--color-text-primary);
-    background: none;
-    border: none;
-    transition: color .2s ease-in-out;
-}
+        color: var(--color-text-primary);
+        background: none;
+        border: none;
+        transition: color .2s ease-in-out;
+    }   
     #menu-theme-switch i{
         font-size: 2.375rem;
         cursor: pointer;
@@ -200,9 +263,6 @@ label {
     .lightmode #menu-theme-switch i:last-child {
         display: block;
     }
-}
-@media (width = 768px){
-
 }
 @media (max-width: 1024px) {
 

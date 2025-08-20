@@ -88,13 +88,21 @@
 .form-btn{
     padding: 15px 30px;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 1.15rem;
     cursor: pointer;
 }
 .copy-email-btn{
     background-color: transparent;
     border: 2.5px solid var(--color-bg-btn);
     color: var(--color-text-tertiary);
+    transition: all .2s ease-in-out;
+}
+.copy-email-btn:active{
+    transform: scale(.98);
+}
+.copy-email-btn:hover{
+    color: #adadad;
+    border-color: #adadad;
 }
 .submit-btn{
     background-color: var(--color-accent-primary);
@@ -125,9 +133,7 @@
     border-left: 10px solid #2fd573;
     opacity: 0;
     transition: .5s ease-out;
-}
-.copy-email-btn:active{
-    transform: scale(.98);
+    z-index: 999;
 }
 .alert-copy.show{
     top: 100px;

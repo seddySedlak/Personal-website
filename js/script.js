@@ -32,6 +32,7 @@ document.querySelectorAll('.option').forEach(option => {
         console.log(hiddenInput.value)
 	});
 });
+
 // Function to show a custom alert (copy notification)
 function showAlertCopy(message) {
 	const alertEl = document.querySelector('.alert-copy');
@@ -49,10 +50,27 @@ document.querySelector('.copy-email-btn').addEventListener('click', function() {
 
 	// Copy the email to the user's clipboard
 	navigator.clipboard.writeText(email)
-		.then(() => showAlertCopy('Email successfully copied to clipboard!')) // Show success alert
+		.then(() => showAlertCopy()) // Show success alert
 		.catch(() => showAlertCopy('Copy failed!')); // Show error alert if copying fails
 });
-// hamburder menu
+// hamburger menu
 const toggleMenu = () => {
     document.body.classList.toggle("open");
 };
+
+// Function to show a custom alert (soon notification)
+function showSoonCopy(message) {
+	const alertEl = document.querySelector('.alert-soon');
+	if (!alertEl) return; // If the alert element is not found, exit
+	alertEl.classList.add('show');
+	if (alertEl._hideTimeout) clearTimeout(alertEl._hideTimeout);
+	alertEl._hideTimeout = setTimeout(() => {
+		alertEl.classList.remove('show');
+	}, 3000);
+}
+document.querySelectorAll('.portfolio-link').forEach(link => {
+	link.addEventListener('click', function(e) {
+		e.preventDefault();
+		showSoonCopy();
+	});
+});
