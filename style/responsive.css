@@ -143,6 +143,16 @@ label {
     }
     .faq-right h2{
         font-size: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .faq-right h2::before{
+        content: "FAQ";
+        font-size: 1.15rem;
+        text-align: center;
+        color: var(--color-text-secondary);
+        font-weight: var(--weight-medium);
     }
     .faq-right svg{
         display: none;
@@ -179,6 +189,9 @@ label {
     }
     .footer-socials i{
         font-size: 1.75rem;
+    }
+    .alert-soon, .alert-copy{
+        width: 100%;
     }
 }
 @media (width <= 768px) {

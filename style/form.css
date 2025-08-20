@@ -118,27 +118,3 @@
 .submit-btn:active{
     transform: scale(.98);
 }
-.alert-copy{
-    position: fixed;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #c3f3d7;
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: #24ad5d;
-    border-left: 10px solid #2fd573;
-    opacity: 0;
-    transition: .5s ease-out;
-    z-index: 999;
-}
-.alert-copy.show{
-    top: 100px;
-    opacity: 1;
-}
-.alert-copy i{
-    font-size: 25px;
-}
