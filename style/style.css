@@ -83,7 +83,7 @@ header, main, footer{
 header, #home, #services, #faq, #contact, footer{
     background-color: var(--color-bg-secondary);
     border-radius: 25px;
-    padding: 40px 60px;
+    padding: 2.5rem 3.5rem;
 }
 /* header */
 header{
@@ -92,7 +92,7 @@ header{
     margin-top: var(--gap);
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     position: fixed;
     transition: box-shadow .1s ease-in-out;
     height: var(--header-height);
@@ -374,6 +374,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    gap: 1.25rem;
 }
 .card{
     width: 100%;
@@ -438,7 +439,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
 }
 .footer-copy{
     font-size: 1.25rem;
@@ -564,12 +565,14 @@ footer{
 .contact-section{
     display: flex;
     justify-content: space-between;
+    gap: 40px;
 }
 .contact-left{
     display: flex;
     flex-direction: column;
     max-width: 40%;
     gap: 10px;
+    width: 100%;
 }
 .contact-left h2{
     font-size: 40px;

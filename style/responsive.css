@@ -211,6 +211,9 @@ label {
         flex-direction: column;
         gap: 10px;
     }
+    .card{
+        max-width: none;
+    }
     /* faq */
     .faq-section{
         flex-direction: column-reverse;
@@ -278,6 +281,9 @@ label {
     header, main, footer{
         width: 100%;
         max-width: 700px;
+    }
+    header, footer{
+        padding: 1rem 1.5rem;
     }
     #menu-theme-switch{
         color: var(--color-text-primary);
@@ -360,7 +366,7 @@ label {
     .lightmode #menu-theme-switch i:last-child {
         display: block;
     }
-    header, #home, #services, #faq, #contact, footer{
+    #home, #services, #faq, #contact{
         padding: 2rem 2.5rem;
     }
     /* hero */
@@ -413,10 +419,202 @@ label {
     .service-btn{
         text-align: center;
     }
+    /* faq */
+    .faq-section{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .faq-header{
+        width: 100%;
+        text-align: center;
+    }
+    .faq-header h3{
+        text-align: center;
+    }
+    .faq-right svg{
+        display: none;
+    }
+    /* contact */
+    .contact-section{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-left{
+        max-width: 100%;
+    }
+    /* footer */
+    footer{
+        padding: 1rem 1.5rem;
+    }
 }
 @media (max-width: 1024px) {
-
+    header, main, footer{
+        width: 100%;
+        max-width: 700px;
+    }
+    /* hamburger menu */
+    #menu-theme-switch{
+        color: var(--color-text-primary);
+        background: none;
+        border: none;
+        transition: color .2s ease-in-out;
+    }   
+    #menu-theme-switch i{
+        font-size: 2.375rem;
+        cursor: pointer;
+    }
+    #menu-theme-switch:hover{
+        color: var(--color-text-secondary);
+    }
+    #menu-theme-switch i{
+        font-size: 30px;
+    }
+    #logo{
+        font-size: 1.2rem;
+    }
+    .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+    }
+    .links, .actions{
+        display: none;
+    }
+    .menu-links{
+        list-style-type: none;
+    }
+    .menu-links a{
+        display: block;
+        text-decoration: none;
+        color: var(--color-text-secondary);
+        padding: .75rem 1rem;
+    }
+    .menu-actions{
+        display: flex;
+        justify-content: space-between;
+        padding: .75rem 1rem;
+    }
+    #menu-contact-btn{
+        text-decoration: none;
+        color: #fcfcfc;
+        background-color: var(--color-accent-secondary);
+        padding: .5rem 4rem;
+        border-radius: 40px;
+        font-weight: 300;
+    }
+    .menu{
+        max-width: 700px;
+        max-height: 600px;
+    }
+    body.open .menu{
+        height: fit-content;
+        overflow:hidden;
+        position: fixed;
+        top: calc(var(--header-height) + calc(var(--gap) * 2)) ;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+        gap: 1rem;
+        border-radius: 25px;
+        padding: 25px;
+        box-sizing: border-box;
+        text-align: left;
+        background-color: var(--color-bg-secondary);
+        box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        width: 100%;
+    }
+    #menu-theme-switch i:last-child {
+        display: none;
+    }
+    .lightmode #menu-theme-switch i:first-child {
+        display: none;
+    }
+    .lightmode #menu-theme-switch i:last-child {
+        display: block;
+    }
+    #home, #services, #faq, #contact{
+        padding: 2rem 2.5rem;
+    }
+    /* hero */
+    .hero-section{
+        gap: 3rem;
+    }
+    .hero-intro{
+        gap: 3rem;
+    }
+    .hero-content{
+        flex-direction: column-reverse;
+        gap: 2rem;
+        width: 100%;
+    }
+    .intro-text{
+        width: 100%;
+    }
+    .description{
+        gap: 2rem;
+    }
+    .description p{
+        max-width: 100%;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo img{
+        width: 35%;
+        border-width: 10px;
+    }
+    /* services */
+    .services-section{
+        gap: 30px;
+    }
+    .services-header{
+        gap: 0;
+        line-height: 1.5;
+    }
+    .services-cards{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card{
+        max-width: 100%;
+        min-height: fit-content;
+        padding: 2rem;
+    }
+    .card-content{
+        flex-direction: row;
+        gap: 40px;
+    }
+    .card-content i{
+        height: fit-content;
+    }
+    .service-btn{
+        text-align: center;
+    }
+    /* faq */
+    .faq-section{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .faq-header{
+        width: 100%;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .faq-header h3{
+        text-align: center;
+    }
+    .faq-right svg{
+        display: none;
+    }
+    /* contact */
+    .contact-section{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .contact-left{
+        max-width: 100%;
+    }
 }
-@media (max-width: 1280px) {
-
-}
+/* @media (max-width: 1280px) {} */
